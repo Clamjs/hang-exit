@@ -4,7 +4,7 @@ var http = require('http');
 var server = http.createServer(function (req, res) {
   res.end('this is a test server forget this !');
 }).listen(123456, function () {
-  util.success("%s 已启动，端口:%d\n", "Clamjs", 123456); 
+  util.success("%s 已启动，端口:%d\n", "Clamjs", 123456, 1); 
 });
 
 
