@@ -4,15 +4,15 @@ var http = require('http');
 var server = http.createServer(function (req, res) {
   res.end('this is a test server forget this !');
 }).listen(123456, function () {
-  util.success("%s 已启动，端口:%d\n", "Clamjs", 123456, 1); 
+  util.success("%s 已启动，端口:%d \n", "Clamjs", 123456, 1); 
 });
-
 
 util.log(HangExit);
 
 new HangExit().use(function (next) {
   util.error('server runing');
   setTimeout(function () {
+    // level => 1*4
     util.log('now resolve this', 1);
     next();
   }, 1000);  
