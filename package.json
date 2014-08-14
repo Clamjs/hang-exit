@@ -1,0 +1,26 @@
+{
+  "name": "hang-exit",
+  "version": "0.0.0",
+  "description": "Hang up the exit with task list",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "debug": "latest",
+    "tiny-onion":"~0.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.alibaba-inc.com:clam/exit-handle.git"
+  },
+  "keywords": [
+    "process-exit-handle"
+  ],
+  "author": "lichenhao",
+  "license": "MIT"
+}
