@@ -11,14 +11,14 @@ util.log(HangExit);
 new HangExit().use(function (next) {
   util.error('server runing');
   setTimeout(function () {
-    util.log('now resolve this');
+    util.log('now resolve this', 1);
     next();
   }, 1000);  
 }).use(function (next) {
   util.log(' this is other task');
   setTimeout(function () {
-    util.log('now resolve this');
+    util.log('now resolve this', 1);
     next();
   }, 1000);
 }).handle()();
-// process.emit("SIGINT");
+process.emit("SIGINT");

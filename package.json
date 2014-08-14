@@ -1,6 +1,6 @@
 {
   "name": "hang-exit",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Hang up the exit with task list",
   "main": "index.js",
   "directories": {
@@ -8,7 +8,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./test/test.js"
   },
   "dependencies": {
     "debug": "latest",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.alibaba-inc.com:clam/exit-handle.git"
+    "url": "https://github.com/Clamjs/hang-exit.git"
   },
   "keywords": [
     "process-exit-handle"
