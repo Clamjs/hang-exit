@@ -1,15 +1,17 @@
 var HangExit = require('../');
-var util = require('tiny-onion').Util;
+var Onion = require('tiny-onion');
+var util = require('mace');
 var http = require('http');
 var server = http.createServer(function (req, res) {
   res.end('this is a test server forget this !');
 }).listen(123456, function () {
-  util.success("%s 已启动，端口:%d \n", "Clamjs", 123456, 1); 
+  util.done("%s 已启动，端口:%d \n", "Clamjs", 123456, 1); 
 });
 
-util.log(HangExit);
-
-new HangExit().use(function (next) {
+new Onion().use(function (next) {
+  HangExit.hangup();
+  next();
+}).use(function (next) {
   util.error('server runing');
   setTimeout(function () {
     // level => 1*4
@@ -22,5 +24,6 @@ new HangExit().use(function (next) {
     util.log('now resolve this', 1);
     next();
   }, 1000);
+}).use(function () {
+  HangExit.exit();
 }).handle()();
-process.emit("SIGINT");
